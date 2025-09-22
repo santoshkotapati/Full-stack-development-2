@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Element Selection Example</title>
+</head>
+<body>
+  <h1 id="header">Header Title</h1>
+  <p class="text">Paragraph 1</p>
+  <p class="text">Paragraph 2</p>
+  <div name="container">Div Container</div>
+
+  <script>
+    // Select by ID
+    const header = document.getElementById("header");
+    console.log("Selected by ID:", header.textContent);
+
+    // Select by class (returns a collection)
+    const paragraphs = document.getElementsByClassName("text");
+    console.log("Selected by class - first paragraph:", paragraphs[0].textContent);
+
+    // Select by tag name (returns a collection)
+    const divs = document.getElementsByTagName("div");
+    console.log("Selected by tag name:", divs[0].textContent);
+
+    // Select by CSS selector (single element)
+    const container = document.querySelector("div[name='container']");
+    console.log("Selected by CSS selector:", container.textContent);
+
+    // Select all elements matching CSS selector (returns NodeList)
+    const allParagraphs = document.querySelectorAll(".text");
+    allParagraphs.forEach((p, index) => {
+      console.log(`Paragraph ${index + 1} using querySelectorAll:`, p.textContent);
+    });
+  </script>
+</body>
+</html>
