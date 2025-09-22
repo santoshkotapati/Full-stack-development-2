@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listeners Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #555;
+      min-height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h2>JavaScript Event Listeners Example</h2>
+
+  <!-- Elements -->
+  <button id="clickBtn">Click Me</button>
+  <input type="text" id="textInput" placeholder="Type something...">
+  <button id="hoverBtn">Hover Over Me</button>
+
+  <div id="output"></div>
+
+  <script>
+    // Get references to elements
+    const clickBtn = document.getElementById("clickBtn");
+    const textInput = document.getElementById("textInput");
+    const hoverBtn = document.getElementById("hoverBtn");
+    const output = document.getElementById("output");
+
+    // Click event listener
+    clickBtn.addEventListener("click", function() {
+      output.innerHTML = "✅ Button clicked!";
+    });
+
+    // Input event listener
+    textInput.addEventListener("input", function() {
+      output.innerHTML = "⌨️ You typed: " + textInput.value;
+    });
+
+    // Mouseover event listener
+    hoverBtn.addEventListener("mouseover", function() {
+      output.innerHTML = "🖱️ Mouse is over the button!";
+    });
+
+    // Mouseout event listener
+    hoverBtn.addEventListener("mouseout", function() {
+      output.innerHTML = "➡️ Mouse left the button!";
+    });
+  </script>
+</body>
+</html>
