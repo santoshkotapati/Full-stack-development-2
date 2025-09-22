@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Click Events Example</title>
+</head>
+<body>
+  <button id="btn1">Click Me (inline)</button>
+  <button id="btn2">Click Me (listener)</button>
+
+  <script>
+    // Handling click event using the onclick property
+    document.getElementById("btn1").onclick = function() {
+      alert("Button 1 was clicked using onclick property!");
+    };
+
+    // Handling click event using addEventListener
+    document.getElementById("btn2").addEventListener("click", function() {
+      alert("Button 2 was clicked using addEventListener!");
+    });
+  </script>
+</body>
+</html>
